@@ -64,7 +64,7 @@ function App() {
             
             <section id="how-it-works">
               <Problem />
-              <SmsDemo />
+              {/* <SmsDemo /> */}
             </section>
 
             <section id="services">

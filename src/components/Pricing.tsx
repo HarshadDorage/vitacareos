@@ -8,68 +8,86 @@ interface PricingProps {
 }
 
 export const Pricing: React.FC<PricingProps> = ({ onCtaClick }) => {
-  const plans = [
-    {
-      name: "Essential Growth",
-      price: "349",
-      tagline: "Fix your reputation and never miss a call.",
-      icon: <Zap className="w-6 h-6 text-slate-500" />,
-      colorClass: "border-slate-200 dark:border-slate-700",
-      headerBg: "bg-slate-50 dark:bg-slate-900",
-      ctaText: "Start Basic",
-      ctaClass: "bg-slate-900 dark:bg-slate-100 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-white",
-      features: [
-        { text: "Auto-Missed Call Text Back", included: true },
-        { text: "Google Profile Setup & Management", included: true },
-        { text: "Auto-Google Review Requests", included: true },
-        { text: "2-Way SMS & Emailing", included: true },
-        { text: "Online Appointment Booking", included: false },
-        { text: "Website Development & Maintenance", included: false },
-        { text: "Weekly/Monthly Reports", included: false },
-      ]
-    },
-    {
-      name: "Professional Suite",
-      price: "599",
-      tagline: "Complete website & booking system makeover.",
-      icon: <Crown className="w-6 h-6 text-primary" />,
-      colorClass: "border-primary ring-4 ring-primary/5 scale-105 z-10",
-      headerBg: "bg-blue-50 dark:bg-blue-900/20",
-      featured: true,
-      badge: "🔥 Most Popular",
-      ctaText: "Start Growth Trial",
-      ctaClass: "bg-primary shadow-xl shadow-primary/20 hover:bg-[#004494]",
-      features: [
-        { text: "Everything in Essential Growth", included: true },
-        { text: "Custom Website Development", included: true }, // Big Value
-        { text: "Website Maintenance & Hosting", included: true },
-        { text: "Online Appointment Booking", included: true },
-        { text: "Weekly Activity Reports", included: true },
-        { text: "Monthly Performance Report", included: false },
-        { text: "VIP Priority Support", included: false },
-      ]
-    },
-    {
-      name: "Elite Expansion",
-      price: "799",
-      tagline: "VIP management & detailed performance tracking.",
-      icon: <Rocket className="w-6 h-6 text-amber-500" />,
-      colorClass: "border-slate-900 dark:border-amber-500/50 bg-slate-900 dark:bg-slate-950 text-white",
-      headerBg: "bg-white/5",
-      ctaText: "Get Full Access",
-      ctaClass: "bg-amber-500 text-slate-900 hover:bg-amber-400",
-      isPremium: true,
-      features: [
-        { text: "Everything in Professional Suite", included: true },
-        { text: "Monthly Deep-Dive Performance Report", included: true },
-        { text: "Priority Website Updates (24h Turnaround)", included: true },
-        { text: "Dedicated Account Manager", included: true },
-        { text: "Advanced Reputation Strategy", included: true },
-        { text: "Quarterly Business Review", included: true },
-        { text: "VIP Priority Support", included: true },
-      ]
-    }
-  ];
+const plans = [
+  {
+    name: "Reputation Starter",
+    price: "349",
+    billingNote: "per month",
+    tagline: "Never lose patients when calls go unanswered.",
+    icon: <Zap className="w-6 h-6 text-slate-500" />,
+    colorClass: "border-slate-200 dark:border-slate-700",
+    headerBg: "bg-slate-50 dark:bg-slate-900",
+    ctaText: "Book Free Demo",
+    ctaClass:
+      "bg-slate-900 dark:bg-slate-100 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-white",
+    features: [
+      { text: "No Phone Number Change Required (Uses Your Existing Clinic Number)", included: true },
+      { text: "Auto Missed-Call SMS to Patient", included: true },
+      { text: "Instant SMS Alert to Doctor / Staff", included: true },
+      { text: "Google Business Profile Setup & Optimization", included: true },
+      { text: "Automatic Google Review Requests", included: true },
+      { text: "2-Way SMS & Email Conversations", included: true },
+      { text: "Appointment Booking System", note: "Upgrade Only" },
+      { text: "Performance Reports", note: "Upgrade Only" },
+    ],
+    roiLine: "Capture patients even when the clinic is closed or busy."
+  },
+
+  {
+    name: "Growth Engine",
+    price: "599",
+    billingNote: "per month",
+    tagline: "Turn missed calls into confirmed appointments.",
+    icon: <Crown className="w-6 h-6 text-primary" />,
+    colorClass: "border-primary ring-4 ring-primary/10 scale-105 z-10",
+    headerBg: "bg-blue-50 dark:bg-blue-900/20",
+    featured: true,
+    badge: "🔥 Most Popular",
+    ctaText: "Get Live Demo",
+    ctaClass:
+      "bg-primary shadow-xl shadow-primary/20 hover:bg-[#004494]",
+    features: [
+      { text: "No Phone Number Change Required (Uses Your Existing Clinic Number)", included: true },
+      { text: "Auto Missed-Call Text Back to Patients", included: true },
+      { text: "Real-Time SMS Alerts to Doctor / Team", included: true },
+      { text: "Google Business Profile Management", included: true },
+      { text: "Automated Review Generation", included: true },
+      { text: "2-Way SMS & Email Inbox", included: true },
+      { text: "Online Appointment Booking", included: true },
+      { text: "Monthly Performance Reports", included: true },
+      { text: "Website Management", note: "Upgrade Only" },
+    ],
+    roiLine: "Recover missed calls and convert them into real patient visits."
+  },
+
+  {
+    name: "Revenue Accelerator",
+    price: "799",
+    billingNote: "per month",
+    tagline: "Fully automated patient capture & growth system.",
+    icon: <Rocket className="w-6 h-6 text-amber-500" />,
+    colorClass:
+      "border-slate-900 dark:border-amber-500/50 bg-slate-900 dark:bg-slate-950 text-white",
+    headerBg: "bg-white/5",
+    ctaText: "Start Full Setup",
+    ctaClass:
+      "bg-amber-500 text-slate-900 hover:bg-amber-400",
+    isPremium: true,
+    features: [
+      { text: "No Phone Number Change Required (Uses Your Existing Clinic Number)", included: true },
+      { text: "Advanced Missed-Call Automation", included: true },
+      { text: "Patient + Doctor Instant Notifications", included: true },
+      { text: "Full Google Profile Optimization & Monitoring", included: true },
+      { text: "Advanced Review & Reputation Management", included: true },
+      { text: "2-Way Messaging & Lead Inbox", included: true },
+      { text: "Fully Managed Online Booking System", included: true },
+      { text: "Website Development & Maintenance", included: true },
+      { text: "Weekly + Monthly Performance Reports", included: true },
+      { text: "Priority Support & Faster Onboarding", included: true },
+    ],
+    roiLine: "A hands-off system that captures patients even when you’re busy."
+  }
+];
 
   return (
     <section className="py-24 bg-softGray dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
