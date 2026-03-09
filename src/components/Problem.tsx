@@ -7,17 +7,17 @@ export const Problem: React.FC = () => {
     {
       icon: <PhoneMissed className="w-6 h-6 text-red-500" />,
       title: "Missed Calls",
-      desc: "The average practice loses $144k/year to missed calls. Every voicemail is a lost opportunity."
+      desc: "Every unanswered call is a lost patient and revenue."
     },
     {
       icon: <Hourglass className="w-6 h-6 text-red-500" />,
       title: "Manual Scheduling",
-      desc: "Spend hours manually scheduling patients. Your time is better spent treating patients."
+      desc: "Stop wasting hours on appointment management and focus on patient care."
     },
     {
       icon: <Banknote className="w-6 h-6 text-red-500" />,
       title: "Lost Revenue",
-      desc: "Without proper lead capture, you're leaving money on the table. Every missed call = lost revenue."
+      desc: "Every missed lead costs your clinic money. Capture and convert every potential patient."
     }
   ];
 
@@ -35,14 +35,14 @@ export const Problem: React.FC = () => {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <span className="text-red-500 font-bold tracking-wider uppercase text-sm mb-4 block">
-            The Silent Growth Killers
+            Silent Growth Killers
           </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-            You Didn't Go to Med School to <br className="hidden md:block" />
-            <span className="text-red-500 decoration-red-200 underline underline-offset-4 decoration-4">Manage a Call Center.</span>
+            Don't Let Administrative <br className="hidden md:block" />
+            <span className="text-red-500 decoration-red-200 underline underline-offset-4 decoration-4">Tasks Drain Your Clinic.</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-            Running a modern clinic is hard enough. Don't let these three outdated workflows drain your practice's profitability.
+            Missed calls, manual scheduling, and poor follow-up silently reduce patient growth and revenue.
           </p>
         </motion.div>
 
@@ -68,19 +68,19 @@ export const Problem: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        
+
         {/* Bottom CTA Connector */}
-        <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
-            className="mt-16 text-center"
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="mt-16 text-center"
         >
-            <p className="text-slate-500 dark:text-slate-500 font-medium inline-flex items-center gap-2">
-                There is a better way 
-                <ArrowRight className="w-4 h-4 animate-bounce-x" />
-            </p>
+          <p className="text-slate-500 dark:text-slate-500 font-medium inline-flex items-center gap-2">
+            Discover a Smarter Way to Grow Your Clinic
+            <ArrowRight className="w-4 h-4 animate-bounce-x" />
+          </p>
         </motion.div>
       </div>
     </section>

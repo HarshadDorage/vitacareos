@@ -13,7 +13,7 @@ const plans = [
     name: "Reputation Starter",
     price: "349",
     billingNote: "per month",
-    tagline: "Never lose patients when calls go unanswered.",
+    tagline: "Capture Every Missed Call and Protect Patient Relationships",
     icon: <Zap className="w-6 h-6 text-slate-500" />,
     colorClass: "border-slate-200 dark:border-slate-700",
     headerBg: "bg-slate-50 dark:bg-slate-900",
@@ -37,7 +37,7 @@ const plans = [
     name: "Growth Engine",
     price: "599",
     billingNote: "per month",
-    tagline: "Turn missed calls into confirmed appointments.",
+    tagline: "Convert Missed Calls Into Confirmed Appointments",
     icon: <Crown className="w-6 h-6 text-primary" />,
     colorClass: "border-primary ring-4 ring-primary/10 scale-105 z-10",
     headerBg: "bg-blue-50 dark:bg-blue-900/20",
@@ -64,7 +64,7 @@ const plans = [
     name: "Revenue Accelerator",
     price: "799",
     billingNote: "per month",
-    tagline: "Fully automated patient capture & growth system.",
+    tagline: "Automate Patient Capture and Maximize Clinic Growth",
     icon: <Rocket className="w-6 h-6 text-amber-500" />,
     colorClass:
       "border-slate-900 dark:border-amber-500/50 bg-slate-900 dark:bg-slate-950 text-white",
@@ -94,8 +94,8 @@ const plans = [
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-primary dark:text-blue-400 font-bold tracking-widest uppercase text-sm mb-4">Pricing Plans</h2>
-          <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Simple, Predictable Pricing.</h3>
-          <p className="text-lg text-slate-600 dark:text-slate-400">Choose the plan that fits your practice's current stage and scale as you grow. All plans include HIPAA-compliant data security.</p>
+          <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Simple, Transparent Pricing.</h3>
+          <p className="text-lg text-slate-600 dark:text-slate-400">Pick the plan that suits your clinic and scale as you grow. All plans include HIPAA-compliant security.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -165,7 +165,7 @@ const plans = [
           <div className="inline-flex items-center gap-6 px-8 py-4 bg-white dark:bg-slate-800 rounded-full border border-slate-100 dark:border-slate-700 shadow-sm">
             <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm font-bold">
               <ShieldCheck className="w-5 h-5 text-secondary" />
-              HIPAA COMPLIANT
+              HIPAA-COMPLIANT SECURITY
             </div>
             <div className="w-px h-4 bg-slate-200 dark:bg-slate-700" />
             <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">

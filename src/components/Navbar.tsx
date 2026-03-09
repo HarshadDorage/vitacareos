@@ -5,10 +5,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface NavbarProps {
   onCtaClick: () => void;
   onHomeClick: () => void;
+    onNavigate: (view: 'landing' | 'privacy' | 'terms' | 'blog' | 'blog-post') => void;
   isLanding: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onCtaClick, onHomeClick, isLanding }) => {
+export const Navbar: React.FC<NavbarProps> = ({ 
+  onCtaClick, 
+  onHomeClick, 
+  onNavigate,
+  isLanding 
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
@@ -42,7 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick, onHomeClick, isLandi
     { name: 'Services', href: 'services' },
     { name: 'Pricing', href: 'pricing' },
     { name: 'How it Works', href: 'how-it-works' },
-    { name: 'Contact', href: 'contact' },
+     { name: 'Blog', href: 'blog', isView: true },
+    // { name: 'Contact', href: 'contact' },
   ];
 
   const scrollToSection = useCallback((id: string) => {
@@ -59,8 +66,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick, onHomeClick, isLandi
     }
   }, []);
 
-  const handleLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string, isView?: boolean) => {
     e.preventDefault();
+
+    if (isView && id === 'blog') {
+      setIsMobileMenuOpen(false);
+      onNavigate('blog');
+      return;
+    }
     
     // Close mobile menu first
     setIsMobileMenuOpen(false);
@@ -83,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick, onHomeClick, isLandi
         scrollToSection(id);
       }
     }
-  }, [isLanding, onHomeClick, scrollToSection]);
+  }, [isLanding, onHomeClick, onNavigate, scrollToSection]);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
@@ -112,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick, onHomeClick, isLandi
             <a 
               key={link.name} 
               href={`#${link.href}`}
-              onClick={(e) => handleLinkClick(e, link.href)}
+              onClick={(e) => handleLinkClick(e, link.href, link.isView)}
               className="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-blue-400 font-medium transition-colors"
             >
               {link.name}
@@ -165,7 +178,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick, onHomeClick, isLandi
               {navLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={(e) => handleLinkClick(e as any, link.href)}
+                  onClick={(e) => handleLinkClick(e as any, link.href, link.isView)}
                   className="text-lg text-slate-700 dark:text-slate-300 font-medium hover:text-primary transition-colors text-left py-2"
                 >
                   {link.name}

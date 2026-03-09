@@ -13,11 +13,15 @@ import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
+import { BlogList } from './components/BlogList';
+import { BlogPost } from './components/BlogPost';
+import { BlogPost as BlogPostType } from './data/blogs';
 
-type View = 'landing' | 'privacy' | 'terms';
+type View = 'landing' | 'privacy' | 'terms' | 'blog' | 'blog-post';
 
 function App() {
   const [view, setView] = useState<View>('landing');
+  const [selectedPost, setSelectedPost] = useState<BlogPostType | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalTitle, setModalTitle] = useState("Book Your Practice Audit");
 
@@ -39,6 +43,14 @@ function App() {
 
   const navigateTo = (newView: View) => {
     setView(newView);
+    if (newView !== 'blog-post') {
+      setSelectedPost(null);
+    }
+  };
+
+  const handlePostClick = (post: BlogPostType) => {
+    setSelectedPost(post);
+    setView('blog-post');
   };
 
   return (
@@ -49,11 +61,12 @@ function App() {
         style={{ scaleX }}
       />
 
-      <Navbar 
-        onCtaClick={() => openModal("Schedule a Demo")} 
-        onHomeClick={() => navigateTo('landing')}
-        isLanding={view === 'landing'}
-      />
+    <Navbar 
+  onCtaClick={() => openModal("Schedule a Demo")} 
+  onHomeClick={() => navigateTo('landing')}
+  onNavigate={navigateTo}
+  isLanding={view === 'landing'}
+/>
       
       <main className="flex-grow">
         {view === 'landing' ? (
@@ -64,7 +77,7 @@ function App() {
             
             <section id="how-it-works">
               <Problem />
-              {/* <SmsDemo /> */}
+              <SmsDemo />
             </section>
 
             <section id="services">
@@ -82,8 +95,12 @@ function App() {
           </>
         ) : view === 'privacy' ? (
           <PrivacyPolicy />
-        ) : (
+        ) : view === 'terms' ? (
           <TermsOfService />
+        ) : view === 'blog' ? (
+          <BlogList onPostClick={handlePostClick} />
+        ) : (
+          selectedPost && <BlogPost post={selectedPost} onBack={() => navigateTo('blog')} />
         )}
       </main>
 

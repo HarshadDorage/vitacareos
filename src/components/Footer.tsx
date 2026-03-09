@@ -4,7 +4,7 @@ import { Activity, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 
 interface FooterProps {
   onCtaClick: () => void;
-  onNavigate: (view: 'landing' | 'privacy' | 'terms') => void;
+  onNavigate: (view: 'landing' | 'privacy' | 'terms' | 'blog' | 'blog-post') => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onCtaClick, onNavigate }) => {
@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ onCtaClick, onNavigate }) => {
               <span className="text-2xl font-display font-bold text-white tracking-tight">VitaCareOS</span>
             </button>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              The only Growth Operating System designed specifically for modern medical and dental clinics. Scale without the stress.
+              The Only Growth OS Built for Modern Medical & Dental Clinics - Grow Your Practice Without Extra Stress.
             </p>
             <div className="flex gap-4">
               <button onClick={onCtaClick} className="p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"><Twitter className="w-4 h-4" /></button>
@@ -59,7 +59,7 @@ export const Footer: React.FC<FooterProps> = ({ onCtaClick, onNavigate }) => {
             <h4 className="font-bold mb-6">Company</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><button onClick={onCtaClick} className="hover:text-primary transition-colors text-left">About Us</button></li>
-              <li><button onClick={onCtaClick} className="hover:text-primary transition-colors text-left">Blog</button></li>
+              <li><button onClick={() => onNavigate('blog')} className="hover:text-primary transition-colors text-left">Blog</button></li>
               <li><button onClick={onCtaClick} className="hover:text-primary transition-colors text-left">Partners</button></li>
             </ul>
           </div>

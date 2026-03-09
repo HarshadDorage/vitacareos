@@ -7,7 +7,7 @@ export const Benefits: React.FC = () => {
   const items = [
     {
       title: "24/7 Smart Booking",
-      desc: "Appointments scheduled even while you sleep. Our system works around the clock to fill your calendar with zero manual input.",
+      desc: "Let VitaCareOS fill your schedule automatically, even while you sleep.",
       icon: <Clock className="w-6 h-6 text-white" />,
       size: "md:col-span-2 md:row-span-2",
       bg: "bg-primary dark:bg-blue-600",
@@ -17,7 +17,7 @@ export const Benefits: React.FC = () => {
       featured: true
     },
     {
-      title: "Bank-Grade Security",
+      title: "HIPAA-Compliant Bank-Grade Security",
       desc: "Your patient data is secure and protected with HIPAA-compliant AES-256 encryption.",
       icon: <ShieldCheck className="w-6 h-6 text-primary dark:text-blue-400" />,
       size: "md:col-span-1 md:row-span-1",
@@ -25,7 +25,7 @@ export const Benefits: React.FC = () => {
       iconBg: "bg-blue-50 dark:bg-blue-900/20"
     },
     {
-      title: "Local SEO Dominance",
+      title: "Dominate Local Search with SEO",
       desc: "Be the first choice in your neighborhood for key medical searches.",
       icon: <MapPin className="w-6 h-6 text-secondary dark:text-green-400" />,
       size: "md:col-span-1 md:row-span-1",
@@ -33,7 +33,7 @@ export const Benefits: React.FC = () => {
       iconBg: "bg-green-50 dark:bg-green-900/20"
     },
     {
-      title: "US-Based Support",
+      title: "US-Based Customer Support",
       desc: "Get help when you need it from our dedicated success team in the USA.",
       icon: <HeartHandshake className="w-6 h-6 text-primary dark:text-blue-400" />,
       size: "md:col-span-1 md:row-span-1",
@@ -41,7 +41,7 @@ export const Benefits: React.FC = () => {
       iconBg: "bg-blue-50 dark:bg-blue-900/20"
     },
     {
-      title: "Real-time Analytics",
+      title: "Real-Time ROI & Booking Analytics",
       desc: "Full transparency into your ROI, patient growth, and booking trends.",
       icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
       size: "md:col-span-2 md:row-span-1",
@@ -50,8 +50,8 @@ export const Benefits: React.FC = () => {
       wide: true
     },
     {
-      title: "Lightning Fast Setup",
-      desc: "Go live in under 14 days with zero technical stress on your team.",
+      title: "Quick Setup",
+      desc: "Launch VitaCareOS in under 14 days without technical stress.",
       icon: <Zap className="w-6 h-6 text-amber-500" />,
       size: "md:col-span-1 md:row-span-1",
       bg: "bg-white dark:bg-slate-800",
@@ -79,7 +79,7 @@ export const Benefits: React.FC = () => {
               <Zap className="w-3 h-3" /> Practice Scaling
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-4 leading-tight">
-              Everything Your Practice Needs <span className="text-primary dark:text-blue-500">to Scale.</span>
+              Grow Your Clinic <span className="text-primary dark:text-blue-500">Without Extra Work.</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
               One unified platform built specifically for medical professionals who want to grow without adding more administrative work.
@@ -173,13 +173,13 @@ export const Benefits: React.FC = () => {
                <ShieldCheck className="w-8 h-8 text-primary dark:text-blue-400" />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-white">Enterprise-Ready Infrastructure</h4>
-              <p className="text-slate-500 dark:text-slate-400">Scale from a single chair to 50+ locations without changing your workflow.</p>
+              <h4 className="text-xl font-bold text-slate-900 dark:text-white">Enterprise-Ready Platform</h4>
+              <p className="text-slate-500 dark:text-slate-400">Scale effortlessly from one clinic to multiple locations.</p>
             </div>
           </div>
           <div className="flex gap-4">
-             <div className="px-4 py-2 bg-slate-50 dark:bg-slate-900 rounded-lg text-xs font-bold text-slate-400 border border-slate-100 dark:border-slate-700 uppercase tracking-widest">API ACCESS</div>
-             <div className="px-4 py-2 bg-slate-50 dark:bg-slate-900 rounded-lg text-xs font-bold text-slate-400 border border-slate-100 dark:border-slate-700 uppercase tracking-widest">SSO ENABLED</div>
+             <div className="px-4 py-2 bg-slate-50 dark:bg-slate-900 rounded-lg text-xs font-bold text-slate-400 border border-slate-100 dark:border-slate-700 uppercase tracking-widest">Full API Access</div>
+             <div className="px-4 py-2 bg-slate-50 dark:bg-slate-900 rounded-lg text-xs font-bold text-slate-400 border border-slate-100 dark:border-slate-700 uppercase tracking-widest">Single Sign-On (SSO) Enabled</div>
           </div>
         </motion.div>
       </div>

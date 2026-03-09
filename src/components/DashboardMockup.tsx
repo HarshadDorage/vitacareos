@@ -28,12 +28,12 @@ export const DashboardMockup: React.FC = () => {
           <div className="p-4 rounded-xl bg-blue-50/50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800">
             <TrendingUp className="w-5 h-5 text-primary dark:text-blue-400 mb-2" />
             <div className="text-2xl font-bold text-slate-800 dark:text-slate-100">142%</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">Practice Growth</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">Practice Growth Achieved by Clients</div>
           </div>
           <div className="p-4 rounded-xl bg-green-50/50 dark:bg-green-900/20 border border-green-100 dark:border-green-800">
             <Users className="w-5 h-5 text-secondary dark:text-green-400 mb-2" />
             <div className="text-2xl font-bold text-slate-800 dark:text-slate-100">48</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">New Patients/Mo</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">New Patients per Month on Average</div>
           </div>
         </div>
 
@@ -73,8 +73,8 @@ export const DashboardMockup: React.FC = () => {
             <Calendar className="text-secondary dark:text-green-400 w-5 h-5" />
           </div>
           <div>
-            <div className="text-xs font-bold text-slate-800 dark:text-slate-100">New Booking!</div>
-            <div className="text-[10px] text-slate-500 dark:text-slate-400">Dental Checkup (10:30 AM)</div>
+            <div className="text-xs font-bold text-slate-800 dark:text-slate-100">Recent Booking:</div>
+            <div className="text-[10px] text-slate-500 dark:text-slate-400">Dental Checkup at 10:30 AM</div>
           </div>
           <Check className="text-secondary dark:text-green-400 w-4 h-4 ml-2" />
         </motion.div>
@@ -88,7 +88,7 @@ export const DashboardMockup: React.FC = () => {
             {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />)}
           </div>
           <div>
-            <div className="text-xs font-bold text-slate-800 dark:text-slate-100">5-Star Review</div>
+            <div className="text-xs font-bold text-slate-800 dark:text-slate-100">5-Star Client Review:</div>
             <div className="text-[10px] text-slate-500 dark:text-slate-400">"Excellent care, booked via text!"</div>
           </div>
         </motion.div>

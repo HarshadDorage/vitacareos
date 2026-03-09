@@ -20,14 +20,14 @@ export const LoomRequest: React.FC<LoomRequestProps> = ({ onRequestClick }) => {
           viewport={{ once: true }}
           className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-6 leading-tight"
         >
-          See Exactly Why Your Dental Clinic
+          Understand Why Your Clinic
           <span className="text-primary"> Loses Patients</span>
         </motion.h1>
 
         <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          Get a short, personalized video audit showing how missed calls,
-          slow follow-ups, and booking gaps are costing your clinic real patients.
-          No sales pitch. Just clarity.
+          Receive a personalized video audit showing missed calls,
+          slow follow-ups, and booking gaps impacting real patients.
+          No sales pitch.
         </p>
       </div>
 

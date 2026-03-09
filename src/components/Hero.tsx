@@ -52,12 +52,12 @@ export const Hero: React.FC<HeroProps> = ({ onAuditClick }) => {
 
               {/* Headline */}
               <h1 className="text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-[1.15] mb-6">
-                Turn Missed Calls Into <span className="text-primary dark:text-blue-500 underline decoration-blue-100 dark:decoration-blue-900/50 decoration-8 underline-offset-4">Booked Revenue.</span> Automatically.
+                Never Lose Another <span className="text-primary dark:text-blue-500 underline decoration-blue-100 dark:decoration-blue-900/50 decoration-8 underline-offset-4">Patient Call Again</span> - Automatically!
               </h1>
 
               {/* Subheadline - Benefit Driven */}
               <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
-                The average practice loses $144k/year to voicemail. Our Growth OS captures every lead, fills your schedule, and automates patient intake—24/7.
+                US medical and dental clinics lose thousands each year to missed calls. VitaCareOS captures every lead, fills your calendar, and automates patient intake 24/7.
               </p>
             </motion.div>
 
@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onAuditClick }) => {
                 onClick={onAuditClick}
                 className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:bg-[#004494] transition-all flex items-center justify-center gap-2 group"
               >
-                Audit My Lost Revenue
+                Get Your Free Revenue Audit
                 <ChevronRight className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
@@ -80,7 +80,7 @@ export const Hero: React.FC<HeroProps> = ({ onAuditClick }) => {
                 className="w-full sm:w-auto bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex items-center justify-center gap-2"
               >
                 <Play className="w-5 h-5 fill-slate-700 dark:fill-slate-200" />
-                Watch How It Works
+                See VitaCareOS in Action
               </button>
             </motion.div>
 
@@ -100,16 +100,16 @@ export const Hero: React.FC<HeroProps> = ({ onAuditClick }) => {
                     <span className="ml-2 text-sm font-bold text-slate-900 dark:text-slate-100">4.9/5</span>
                   </div>
                   <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
-                    Average Client ROI Rating
+                    Average Client ROI
                   </p>
                 </div>
                 <div className="hidden sm:block w-px h-8 bg-slate-200 dark:bg-slate-800" />
                 <div className="flex items-center gap-3">
                   <div className="bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded text-[10px] font-bold text-green-700 dark:text-green-400 border border-green-100 dark:border-green-800 flex items-center gap-1">
-                    <TrendingUp className="w-3 h-3" /> 30% AVG GROWTH
+                    <TrendingUp className="w-3 h-3" /> 30% Average Growth for Clinics
                   </div>
                   <div className="bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded text-[10px] font-bold text-primary dark:text-blue-400 border border-blue-100 dark:border-blue-800 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> HIPAA COMPLIANT
+                    <CheckCircle2 className="w-3 h-3" /> HIPAA-Compliant Data Security
                   </div>
                 </div>
               </div>

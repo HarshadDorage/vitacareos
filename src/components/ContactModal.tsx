@@ -171,7 +171,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, tit
                       </div>
                       <div className="w-px h-3 bg-slate-200 dark:bg-slate-700" />
                       <div className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tight">
-                        HIPAA COMPLIANT
+                        HIPAA-COMPLIANT SECURITY
                       </div>
                     </div>
                   </div>
